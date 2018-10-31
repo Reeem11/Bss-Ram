@@ -1,0 +1,61 @@
+package table ;
+import java.util.Scanner;
+public class Table{	
+public static void main(String[] args)
+	{		int a,b,c,d;
+        Scanner sc=new Scanner(System.in);
+        String again ,g;
+        process :do{
+        System.out.println(" Enter range of numbers  you want print their multiplication tables.. first number :: ");
+        outer: for(int j=1;j<=5;j++){
+        while(!sc.hasNextInt()){
+          
+            System.out.println(" you should enter numbers !!.. Enter again");
+              sc.next();
+            if(j==5){
+              System.out.println("error :if you want to go on :Yes");
+                 g =sc.next();
+               again =g;
+              continue process;
+        } 
+        continue outer ;
+        }
+        }
+       a=sc.nextInt();
+       System.out.println("Enter the other number");
+       outer : for(int i=1;i<=5;i++){
+        while(!sc.hasNextInt()){
+            
+            System.out.println(" you should enter numbers !!.. Enter again");
+           sc.next();
+           if(i==5){
+        } else {
+               System.out.println("error :if you want to go on :Yes");
+               g =sc.next();
+               again =g;
+               continue process;
+            } 
+        continue outer ;
+        }
+        }
+        
+       b=sc.nextInt(); 
+		for(c=a;c<=b;++c){
+          for(d=1;d<=12;++d)
+          {
+              if(c>d){
+                  System.out.print("\t\t");
+              }
+              else{
+              System.out.print("\t");
+              System.out.format("%9s",c+"*"+d+"="+c*d);
+           }
+          }
+              System.out.println("\t");
+       }
+                System.out.println(" Do you want print any multiplication again ? Yes||No");
+                again=sc.next();
+    }while(again.equalsIgnoreCase("Yes"));
+        }
+}
+

@@ -1,0 +1,165 @@
+package array;
+import java.util.Scanner;
+public class Array {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+   Scanner input=new Scanner(System.in);
+   String again,d;
+ int m,n,p,q;
+ process:do{
+        System.out.println("enter row of matrix 1= ");
+        outer:  for(int h=1;h<6;h++){
+        while(!input.hasNextInt())
+        {
+         System.out.println("enter row of matrix 1 again = ");
+            input.next();
+              if(h==5){
+               System.out.println("error you :if you want to go on press :Yes");
+               d=input.next();
+               again=d;
+              continue process;
+        } 
+        continue outer;
+        }
+        }
+         m=input.nextInt();
+       System.out.println("enter column of matrix 1 = ");
+        outer:  for(int h=1;h<6;h++){
+        while(!input.hasNextInt())
+        {
+            System.out.println("enter column of matrix 1 again = ");
+        input.next();
+         if(h==5){
+               System.out.println("error you :if you want to go on press :Yes");
+               d=input.next();
+               again=d;
+              continue process;
+        } 
+        continue outer;
+        }
+        }
+         n=input.nextInt();
+           System.out.println("enter row of  matrix 2= ");
+            outer:  for(int h=1;h<6;h++){
+        while(!input.hasNextInt())
+        {
+           System.out.println("enter row of  matrix 2= again ");
+        input.next();
+         if(h==5){
+               System.out.println("error you :if you want to go on press :Yes");
+               d=input.next();
+               again=d;
+              continue process;
+        } 
+        continue outer;
+        }
+        }
+         p=input.nextInt();
+       System.out.println("enter column of  matrix 2= ");
+        outer:  for(int h=1;h<6;h++){
+        while(!input.hasNextInt())
+        {
+        System.out.println("enter colun of  matrix 2 again= ");
+        input.next();
+         if(h==5){
+               System.out.println("error you :if you want to go on press :Yes");
+               d=input.next();
+               again=d;
+              continue process;
+        } 
+        continue outer;
+        }
+        }
+        q=input.nextInt();
+        
+        int [][]x=new int[m][n];
+        int [][]y=new int[p][q];
+        int [][]z=new int[m][n];
+         if((m!=0&&n!=0)&&(p!=0&&q!=0))  
+         {
+        if(m==p&&n==q)
+        {
+        System.out.println("enter matrix x elements:");
+        for(int row=0 ;row<m;row++){
+            for(int col=0;col<n;col++)
+        {
+            System.out.println("enter the element at"+row+","+col+": ");
+             outer:  for(int h=1;h<6;h++){
+            while(!input.hasNextInt())
+            {
+                System.out.println("enter the element at"+row+","+col+"again: ");
+                input.next();
+                if(h==5){
+               System.out.println("error you :if you want to go on press :Yes");
+               d=input.next();
+               again=d;
+              continue process;
+        } 
+        continue outer;
+        }
+            }
+         x[row][col]= input.nextInt();
+        }
+        }
+          System.out.println("enter matrix y elements:");
+        for(int row=0 ;row<p;row++){
+        for(int col=0;col<q;col++)
+        {
+            System.out.println("enter the element at"+row+","+col+": ");
+         outer:  for(int h=1;h<6;h++){
+            while(!input.hasNextInt())
+            {
+                System.out.println("enter the element at"+row+","+col+"again: ");
+                input.next();
+                if(h==5){
+               System.out.println("error you :if you want to go on press :Yes");
+               d=input.next();
+               again=d;
+              continue process;
+        } 
+        continue outer;
+        }
+             }
+         y[row][col]= input.nextInt();
+        }
+        }
+             for(int row=0 ;row<m;row++){
+            for(int col=0;col<n;col++){
+                  z[row][col]=x[row][col]+y[row][col];
+            }  
+            }
+             System.out.println("matrix of sum: ");
+            for(int row=0 ;row<m;row++){
+            for(int col=0;col<n;col++){
+                if(z[row][col]<10){
+                System.out.print(z[row][col]+"   ");
+            } 
+                else if(z[row][col]<100)
+                {
+                 System.out.print(z[row][col]+"  ");
+                }
+            else
+                {
+                  System.out.print(z[row][col]+" ");
+                }
+            }
+                System.out.println(" ");
+            }
+         }
+          else 
+        {
+            System.out.println("the matrices size arenot equal in # of rows or column:please try again: ");  
+                   
+                    }
+         }
+           else
+         {
+              System.out.println("the # of rows or column of matrices maybe zero,so the matrix doesnot exit: ");
+                 }
+         System.out.println("do you want to calculate another matrices sum press Yes||No: ");  
+         again=input.next();
+        }while(again.equalsIgnoreCase("Yes"));
+}
+} 

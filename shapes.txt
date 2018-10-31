@@ -1,0 +1,760 @@
+package shapes;
+
+import java.util.Scanner;
+public class Shapes {
+    public static void main(String[] args) {
+    
+        float x, y, h, r, z, m;
+        int b, c, d, f;
+        String again;
+        Scanner a = new Scanner(System.in);
+        System.out.println("enter the condition that you want :\n 1 for area \n 2 for perimeter \n 3 for size!");
+        do {
+            while (!a.hasNextFloat()) {
+                System.out.println("enter the number of the case that you want again: ");
+                a.next();
+            }
+            b = a.nextInt();
+            switch (b) {
+                case 1:
+                    do {
+                        System.out.println("choose the area of the shape that you want: \n 1: for rectangular\n 2:for square\n 3:for diamond\n 4:for Irregular Trapezoidal\n 5:for triangle\n 6:for circul\n 7:for cylender\n 8:for sphere\n 9:forParallel Rectangles\n 10:for cube");
+                      while (!a.hasNextFloat()) {
+                      System.out.println("enter the number of the case that you want again: ");
+                               a.next();
+                                }
+                      c = a.nextInt();
+                        switch (c) {
+                            case 1:
+                                System.out.println("The shape is flat and is rectangle");
+                                System.out.println("input length=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                System.out.println("input width=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  width again = ");
+                                        break;
+                                    }
+                                }
+
+                                y = a.nextFloat();
+                                if (x <= 0 || y <= 0) {
+                            System.out.println("the diminsions that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the length again");
+                            x=a.nextInt();
+                           System.out.println("enter the width again");
+                            y=a.nextInt();
+                           System.out.println("the area =" + (x*y));
+                            break;
+                        }while(true);
+                   
+                       }
+                        else
+                        {
+                      System.out.println("the area =" + (x*y));
+                        }
+                         break;
+                            case 2:
+                                System.out.println("the shape is flat and is square");
+                                System.out.println("input length=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                if (x <= 0) {
+                            System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the length again");
+                            x=a.nextInt();
+                           System.out.println("the area =" + (x*x));
+                            break;
+                        }while(true);
+                   
+                       }
+                        else
+                        {
+                      System.out.println("the area =" + (x*x));
+                        }
+                         break;
+                            case 3:
+                                System.out.println("the shape is flat and is diamond");
+                                System.out.println("input length=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                System.out.println("input height=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  height again = ");
+                                        break;
+                                    }
+                                }
+                                h = a.nextFloat();
+                                if (x <= 0 || h <= 0) {
+                                    System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the length again");
+                            x=a.nextInt();
+                           System.out.println("enter the height again");
+                            h=a.nextInt();
+                           System.out.println("the area =" + (x*h));
+                            break;
+                        }while(true);
+                               }
+                               else {
+                                    System.out.print("area of diamond= " + x*h);
+                                }
+                                    break;
+                                
+
+                            case 4:
+                                System.out.println("the shape is flat and is Irregular   Trapezoidal");
+                                System.out.println("input length of base 1=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                System.out.println("input length of base 2=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length of base 2 again = ");
+                                        break;
+                                    }
+                                }
+                                y = a.nextFloat();
+                                System.out.println("input height=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  height again = ");
+                                        break;
+                                    }
+                                }
+                                h = a.nextFloat();
+                          
+                              if (x <= 0 || y<=0 || h <= 0) {
+                          System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the length again");
+                            x=a.nextInt();
+                         System.out.println("enter the width again");
+                            y=a.nextInt();
+                         System.out.println("enter the height again");
+                            h=a.nextInt();
+                           System.out.println("area of irregular   Trapezoidal = " + ((x+ y) * h * (00.5)));
+                            break;
+                        }while(true);
+                                } 
+                                else 
+                               {
+                                   System.out.println("area of irregular   Trapezoidal = " + ((x+ y) * h * (00.5)));
+            }               
+                    break;
+                            case 5:
+                                System.out.println("The shape is flat and is triangle");
+                                System.out.println("input length of base =");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                System.out.println("input height =");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  height again = ");
+                                        break;
+                                    }
+                                }
+                                h = a.nextFloat();
+                              
+
+                          if(x<=0 || h<=0){
+                                 System.out.println("the diminsions that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the length again");
+                            x=a.nextInt();
+                           System.out.println("enter the height again");
+                            h=a.nextInt();
+                            System.out.println("area of triangle =" + ((0.5) * x*h));
+                            break;
+                        }while(true);
+                        }
+                        else {
+                            System.out.println("area of triangle =" + ((0.5) * x*h));
+                          }
+                            break;
+                            case 6:
+                                System.out.println("The shape is flat and is circul");
+                                System.out.println("input radius=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  radius again = ");
+                                        break;
+                                    }
+                                }
+                                r = a.nextFloat();
+                                if (r <= 0) {
+                                        System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the radius again");
+                            r=a.nextInt();
+                           System.out.println("area of triangle" + ((r * r) * (Math.PI)));
+                            break;
+                        }while(true);
+                                 } 
+                             else 
+                               {
+                            System.out.println("area of triangle" + ((r * r) * (Math.PI)));
+                                }
+                               break;
+                               case 7:
+                                System.out.println("The shape is Three dimensional  is cylender");
+                                System.out.println("input radius=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  radius again = ");
+                                        break;
+                                    }
+                                }
+                                r = a.nextFloat();
+                                System.out.println("input height=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  height again = ");
+                                        break;
+                                    }
+                                }
+                                h = a.nextFloat();
+                                if (r <= 0 || h <= 0) {
+                                            System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the radius again");
+                            r=a.nextInt();
+                            System.out.println("enter the height again");
+                            h=a.nextInt();
+                           System.out.println("area of cylender = " + (2 * r * (Math.PI)*(r +h)));
+                            break;
+                        }while(true);               
+                            }
+            
+                                
+                    else {
+                            System.out.println("area of cylender = " + (2 * r * (Math.PI)*(r +h)));
+                         }
+                             break;
+                            case 8:
+                                System.out.println("The shape is Three dimensional  is sphere");
+                                System.out.println("input radius=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  radius again = ");
+                                        break;
+                                    }
+                                }
+                                r = a.nextFloat();
+                                if (r <= 0) {
+                            System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the radius again");
+                            r=a.nextInt();
+                           System.out.println("area of cylender= " + (4 * (r*r) * (Math.PI)));
+                            break;
+                        }while(true);  
+                                } else {
+                                    System.out.println("area of cylender= " + (4 * (r*r) * (Math.PI)));
+                                }
+                                break;
+                            case 9:
+                                System.out.println("The shape is Three dimensional  is Parallel Rectangles");
+                                System.out.println("input length=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                System.out.println("input width=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  width again = ");
+                                        break;
+                                    }
+                                }
+                                y = a.nextFloat();
+                                System.out.println("input height=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  height again = ");
+                                        break;
+                                    }
+                                }
+                                h = a.nextFloat();
+                                if (x <= 0 || y <= 0 || h <= 0) {
+                            System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the radius again");
+                            r=a.nextInt();
+                            System.out.println("enter the width again");
+                            y=a.nextInt();
+                            System.out.println("enter the height again");
+                            h=a.nextInt();
+                           System.out.println("area of Parallel Rectangles= " + (2 * (x*y) + h*y + (h*x)));
+                            break;
+                        }while(true);        
+                        
+                                } else {
+                                    System.out.println("area of Parallel Rectangles= " + (2 * (x*y) + h*y + (h*x)));
+                               }
+                                break;
+                               
+                            case 10:
+                                System.out.println("The shape is Three dimensional  is cube");
+                                System.out.println("input length=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                if (x <= 0) {
+                                    System.out.println("the dimension you entered is negative : ");
+                                    System.out.println("area of cube= " + (6 * Math.abs(x) * Math.abs(x)));
+                                }
+                               else if (x == 0) {
+                                    System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the length again");
+                           x=a.nextInt();
+                           System.out.println("area of Parallel Rectangles= " + (6* (x*x)));
+                            break;
+                        }while(true);        
+                        
+                                } else {
+                                    System.out.println("area of cube= " + (6 * (x*x)));
+                               }
+                                break;
+                            default:
+                                System.out.println("error");
+                                break;
+                        }
+
+                        System.out.println("do you want to calculate another area press Yes||No: ");
+                        again = a.next();
+                    } while (again.equalsIgnoreCase("Yes"));
+                    break;
+                case 2:
+                    do {
+                        System.out.println("choose the perimeter of the shape that you want: \n 1:for rectangular\n 2:for square\n 3:for diamond\n 4:for Irregular  Trapezoidal\n 5:for triangle\n 6:for circul");
+                        while (!a.hasNextFloat()) {
+                            System.out.println("enter the number of the case that you want again: ");
+                            a.next();
+                        }
+
+                        d = a.nextInt();
+                        switch (d) {
+                            case 1:
+                                System.out.println("The shape is flat and is rectangular");
+                                System.out.println("input length=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                System.out.println("input width=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  width again = ");
+                                        break;
+                                    }
+                                }
+                                y = a.nextFloat();
+                                if (x <= 0 || y <=0) {
+                                     System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the length again");
+                            x=a.nextInt();
+                            System.out.println("enter the width again");
+                            y=a.nextInt();
+                           System.out.println("area of Parallel Rectangles= " + (2 * (x+y)));
+                            break;
+                        }while(true);        
+                        
+                                } else {
+                                    System.out.println("perimeter of rectangular= " + (2 * (x+y)));
+                                }
+                                break;
+                            case 2:
+                                System.out.println("the shape is flat and is square");
+                                System.out.println("enter length = ");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                if (x <= 0) {
+                                      System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the length again");
+                            x=a.nextInt();
+                           System.out.println("area of Parallel Rectangles= " + (2 * x));
+                            break;
+                        }while(true);        
+                        
+                                } else {
+                                    System.out.println("perimeter of square= " + (4 * x));
+                               }
+                                break;
+                            case 3:
+                                System.out.println("the shape is flat and is diamond");
+                                System.out.println("input length=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter length again=  ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                if (x <= 0) {
+                                        System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the length again");
+                            x=a.nextInt();
+                           System.out.println("area of Parallel Rectangles= " + (2 * x));
+                            break;
+                        }while(true);        
+                        
+                                } else {
+                                   System.out.println("perimeter of diamond =" + (4 * x));
+                               }
+                                break;
+                            case 4:
+                                System.out.println("the shape is flat and is Irregular   Trapezoidal");
+                                System.out.println("input length of base 1=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length of base 1 again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                System.out.println("input length of base 2=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length of base 2 again = ");
+                                        break;
+                                    }
+                                }
+                                y = a.nextFloat();
+                                System.out.println("input length of base 3=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length of base 3 again = ");
+                                        break;
+                                    }
+                                }
+                                m = a.nextFloat();
+                                System.out.println("input length of base 4=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length of base 4 again = ");
+                                        break;
+                                    }
+                                }
+                                z = a.nextFloat();
+                                if (x <=0 || y <= 0 || z <= 0 || m <= 0) {
+                                System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                       do{
+                           System.out.println("enter  length of base 4 again = ");
+                            x=a.nextInt();
+                            System.out.println("enter  length of base 4 again = ");
+                            y=a.nextInt();
+                            System.out.println("enter  length of base 4 again = ");
+                            z=a.nextInt();
+                            System.out.println("enter  length of base 4 again = ");
+                            m=a.nextInt();
+                            System.out.println("perimeter of irregular   Trapezoidal = " + (x + y + z+ m));
+                      break;  }while(true);
+                       
+                                } else {
+                                    System.out.println("perimeter of irregular   Trapezoidal = " + (x+y+z+m));
+                              }
+                                break;
+                            case 5:
+                                System.out.println("The shape is flat and is triangle");
+                                System.out.println("input lengh 1=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length 1 again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                System.out.println("input length 2=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length 2 again = ");
+                                        break;
+                                    }
+                                }
+                                y = a.nextFloat();
+                                System.out.println("input lengh 3=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length 3 again = ");
+                                        break;
+                                    }
+                                }
+                                z = a.nextFloat();
+                                if (x <= 0 || y <= 0 || z <= 0) {
+                                   System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                          do{
+                            System.out.println("enter the length 1 again");
+                            x=a.nextInt();
+                            System.out.println("enter the length 2 again");
+                            y=a.nextInt();
+                            System.out.println("enter the length 3 again");
+                            z=a.nextInt();
+                            System.out.println("perimeter of triangle =" + (x + y + z)); 
+                            break;
+                        }while(true);
+                               }
+                               else{
+                                   System.out.println("perimeter of triangle =" + (x+y+z)); 
+                                }
+                            break;
+                            case 6:
+                                System.out.println("The shape is flat and is circul");
+                                System.out.println("input radius=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  radius again = ");
+                                        break;
+                                    }
+                                }
+                                r = a.nextFloat();
+                                if (r <= 0) {
+                                   System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                       do{
+                            System.out.println("enter the radius again");
+                            r=a.nextInt();
+                             System.out.println("perimeter of circul =" + (2 * (Math.PI) * r));
+                             break;
+                        }while(true);
+                                } else {
+                                    System.out.println("perimeter of circul =" + (2 * (Math.PI) * r));
+                               }
+                                    break;
+                            default:
+                                System.out.println("error");
+                                break;
+                        }
+                        System.out.println("do you want to calculate another perimeter press Yes||No: ");
+                        again = a.next();
+                    } while (again.equalsIgnoreCase("Yes"));
+                    break;
+                case 3:
+                    do {
+                        System.out.println("choose the shape size  that you want :\n 1:for cylender\n 2:for sphere\n 3:for Parallel Rectangles\n 4:for cube ");
+                        while (!a.hasNextFloat()) {
+                            System.out.println("enter the number of the case that you want again: ");
+                            a.next();
+                        }
+                        f = a.nextInt();
+                        switch (f) {
+                            case 1:
+                                System.out.println("The shape is Three dimensial  is cylender");
+                                System.out.println("input radius=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  radius again = ");
+                                        break;
+                                    }
+                                }
+                                r = a.nextFloat();
+                                System.out.println("input height=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  height again = ");
+                                        break;
+                                    }
+                                }
+                                h = a.nextFloat();
+                                if (r <=0 || h <= 0) {
+                                   System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                               do{
+                            System.out.println("enter the radius again");
+                            r=a.nextInt();
+                            System.out.println("enter the height again");
+                            h=a.nextInt();
+                             System.out.println("size of cylender =" + (r*r*h * (Math.PI)));
+                             break;
+                        }while(true);
+                                } else {
+                                    System.out.println("size of cylender =" + (r*r*h* (Math.PI)));
+                               }
+                                    break;
+                            case 2:
+                                System.out.println("The shape is Three dimensional  is sphere");
+                                System.out.println("input radius=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  radius again = ");
+                                        break;
+                                    }
+                                }
+                                r = a.nextFloat();
+                                if (r <= 0) {
+                                    System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the radius again");
+                            r=a.nextInt();
+                            System.out.println("size of sphere =" + ((4 / 3) * (Math.PI) * r * r * r));
+                            break;
+                        }while(true);
+                                } else {
+                               System.out.println("size of sphere =" + ((4 / 3) * (Math.PI) * r*r*r));
+                               }
+                                break; 
+                            case 3:
+                                System.out.println("The shape is Three dimensional  is Parallel Rectangles");
+                                System.out.println("input length=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                System.out.println("input width=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  width again = ");
+                                        break;
+                                    }
+                                }
+                                y = a.nextFloat();
+                                System.out.println("input height=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  height again = ");
+                                        break;
+                                    }
+                                }
+                                h = a.nextFloat();
+                                if (x <= 0 || y <= 0 || h <= 0) {
+                                   System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                         do{
+                            System.out.println("enter the length again");
+                            x=a.nextInt();
+                            System.out.println("enter the width again");
+                            y=a.nextInt();
+                            System.out.println("enter the height again");
+                            h=a.nextInt();
+                           System.out.println("size of Parallel Rectangles =" + (x*y*h));
+                           break;
+                        }while(true);
+                                } else {
+                                    System.out.println("size of Parallel Rectangles =" + (Math.abs(x) * Math.abs(y) * Math.abs(h)));
+                               } break;
+                            case 4:
+                                System.out.println("The shape is Three dimensional  is cube");
+                                System.out.println("input length=");
+                                for (int i = 1; i <= 5; i++) {
+                                    while (!a.hasNextFloat()) {
+                                        a.next();
+                                        System.out.println("enter  length again = ");
+                                        break;
+                                    }
+                                }
+                                x = a.nextFloat();
+                                if (x <= 0) {
+                                   System.out.println("the diminsion that you entered maybe negative or zero the shape doesnot exit ");
+                        do{
+                            System.out.println("enter the length again");
+                            x=a.nextInt();
+                            System.out.println("size of cube =" + (x*x*x));
+                            break;
+                        }while(true);
+                                } else {
+                                    System.out.println("size of cube =" + (x*x*x));
+                               }
+                                break;
+                            default:
+                                System.out.println("error");
+                                break;
+                        }
+                        System.out.println("do you want to calculate another perimeter press Yes||No: ");
+                        again = a.next();
+                    } while (again.equalsIgnoreCase("Yes"));
+                    break;
+                default:
+                    System.out.println("error");
+                    break;
+            }
+            System.out.println("do you want to calculate another shape press Yes||No: ");
+            again = a.next();
+        } while (again.equalsIgnoreCase("Yes"));
+    }
+}
+
+

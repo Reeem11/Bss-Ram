@@ -1,0 +1,29 @@
+package divison ;
+import java.util.Scanner;
+public class Divison {
+    public static void main(String[] args) {
+         Scanner reader =new Scanner(System.in);
+        String num1,num2;
+    while(true){
+     try{ 
+        System.out.println("enter the first value");
+        num1=reader.next();
+        System.out.println("enter the scande value");
+        num2=reader.next();
+              Float.parseFloat(num1);
+              Float.parseFloat(num2);
+       while( Float.parseFloat(num2)==0){
+              System.out.println("enter num2 again");
+              num2=reader.next();
+
+         if (  Float.parseFloat(num2)!=0){
+            System.out.println("result= "   +   Double.parseDouble(num1)/Double.parseDouble(num2));
+                             }
+       }
+        break;
+       }
+       catch(Exception ex) { 
+            System.out.println("there is a problem in your input");}
+        }
+    }
+    }
